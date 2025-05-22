@@ -1,5 +1,9 @@
 const myLibrary = [];
 
+const bookContainer = document.querySelector(".bookContainer");
+const bookDialog = document.querySelector("dialog");
+const newBookButton = document.querySelector("#newBook");
+
 function Book(id, title, author, read) {
     this.id = id;
     this.title = title;
@@ -13,7 +17,9 @@ function addBook(title, author, read) {
     myLibrary.push(newBook);
 }
 
-const bookContainer = document.querySelector(".bookContainer");
+newBookButton.addEventListener("click", () => {
+    bookDialog.show();
+});
 
 
 addBook("Test Title", "Author", true);
